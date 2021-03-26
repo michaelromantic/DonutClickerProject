@@ -3,51 +3,48 @@ class DonutMaker {
         this.donutCount = 0;
         this.donutsPerClick = 1;
         this.autoClickerCount = 0;
-        this.autoClickerCost = 20;
+        this.autoClickerCost = 125;
         this.multiplierCount = 0;
-        this.multiplierCost = 10;
+        this.multiplierCost = 25;
+            
     }
 
     addDonut() {
         this.donutCount += this.donutsPerClick;
     }
-    
+
     addMultiplier(){
         if (this.donutCount >= this.multiplierCost){
             this.donutCount -= this.multiplierCost;
             this.multiplierCount++;
-            let costIncreaseM = this.multiplierCost * .1;
+            let costIncreaseM = this.multiplierCost * .15;
             this.multiplierCost += costIncreaseM;
-            this.donutsPerClick = Math.pow(1.2, this.multiplierCount);
-        }
-
-        else{
-            
+            this.donutsPerClick = Math.pow(1.1, this.multiplierCount);
         }
     }
-    
+
     addAutoClicker(){
         if (this.donutCount >= this.autoClickerCost){
             this.donutCount -= this.autoClickerCost;
             this.autoClickerCount++;
-            let costIncreaseA = this.autoClickerCost * .1;
+            let costIncreaseA = this.autoClickerCost * .15;
             this.autoClickerCost += costIncreaseA;
         }
-        
-        else{
-             
-        }
     }
-        
+
+    autoClickerFucn(){
+        this.donutCount += this.donutsPerClick * this.autoClickerCount;
+    }
+
     resetStats(){
         this.donutCount = 0;
         this.donutsPerClick = 1;
         this.autoClickerCount = 0;
-        this.autoClickerCost = 20;
+        this.autoClickerCost = 125;
         this.multiplierCount = 0;
-        this.multiplierCost = 10;
+        this.multiplierCost = 25;
     }
-        
+
     getDonutCount() {
         return this.donutCount;
     }
@@ -55,7 +52,7 @@ class DonutMaker {
     getAutoClickerCount(){
         return this.autoClickerCount;
     }
-        
+
     getAutoClickerCost(){
         return this.autoClickerCost;
     }
