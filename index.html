@@ -3,12 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Module 4 Project</title>
+    <title>Donut Clicker</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <header>
+        <nav>
+            <h3 id="logo">JAME THE BAKER BAKING CO.</h3>
+            <div class="nav_links">
+                <a id="modalBtn">ABOUT</a>
+                <a href="https://orteil.dashnet.org/cookieclicker/" target="popup">INSPIRATION</a>
+                <a href="https://michaelromantic.github.io./" target="popup">CREATOR</a>
+            <img id="Jame" src="/src/images/JameDaBaker.png">
+            </div>
+        </nav>
+        
+        <div id="myModal" class="modal">
+            <div class="modal_content">
+                <span id="close" class="close">&times;</span>
+                <h2>JAME THE BAKER BAKING CO.</h2>
+                <p>(pronounced James without the "s")</p>
+                <p>Jame started making donuts at the age of 5. Throughout the years he has perfected the art of donut making. Jame the Baker Baking Company has won "Donut of The Year" every year since the company was founded in 1987. What can we say?? Jame LOVES donuts!! It's almost creepy how much he loves donuts.... Seriously... 34 years in a row? Anyways... stop by and pickup a dozen of our award winning donuts and a cup of our world famous apple cider.<br>- JBBC</p>
+            </div>
+        </div>
+
+    </header>
+
+    
     <div class="container">
+        <h1>DONUT CLICKER</h1>
         <div class="anchor"></div>
+        <main>
+            <section class="stats">
+                <div class="stats__donuts"></div>
+                <div class="stats__donuts-per-click"></div>
+                <div class="stats__multipliers"></div>
+                <div class="stats__multiplier-cost"></div>
+                <div class="stats__auto-clickers"></div>
+                <div class="stats__auto-clicker-cost"></div>
+            </section>
+            <section class="maker">
+                <img id="donut" class="maker__clicker" src="src\images\Donut.png">
+                <br>
+                <button class="maker__auto-clicker" disabled>Buy Auto Clicker</button>
+                <button class="maker__multiplier" disabled>Buy Multiplier</button>
+                <button class="maker__reset">Reset</button>
+            </section>
+        </main>
     </div>
-    <script src="/src/app.js"></script>
+
+    <script src="./src/js/donutmaker.js"></script>
+    <script src="./src/js/app.js"></script>
+
 </body>
 </html>
